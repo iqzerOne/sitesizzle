@@ -1,0 +1,350 @@
+.header, nav, main, footer {
+    max-width: 1080px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    padding: 0 20px; /* Отступы по бокам для читаемости */
+}
+
+.header{
+    height: 157px;
+    margin-top: 40px;
+    /* background-color: aqua; */
+}
+
+.header_top{
+    min-height: 63px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    
+}
+
+.style-left-start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search_city{
+    max-width: 150px;
+    max-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 39px;
+}
+
+.button-register-chef:hover p {
+    color: #FED112; 
+}
+
+.button-register-chef:hover{
+    border-bottom: 2px solid #666666;
+}
+
+.button_search_city p{
+    font-size: 16px;
+    color:#666666;
+    letter-spacing: 0;
+}
+.down-vector{
+    padding-left: 10px;
+}
+
+.select-city {
+    max-width: 150px;
+    min-height: 45px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    /* background-color:#F5F4F2; */
+    /* border-bottom: 1px solid black; */
+    font-size: 16px;
+    color: #666666;
+    cursor: pointer;
+    padding-left: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/static/images/vector_down_select.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    /* padding-right: 20px; */
+    
+}
+
+.select-city:hover{
+    background-color:#F5F4F2;
+}
+
+/* .select-city:hover {
+    outline: none;
+    border-bottom: 1px solid #FED112;
+} */
+
+
+.register_chef{
+    min-width: 145.5px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-register-chef{
+    background: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #FED112;
+    appearance: none;
+    -webkit-appearance: none; /* Для Safari */
+    -moz-appearance: none;
+}
+
+.style-right-end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket{
+    margin-left: 54px;
+}
+
+.user_cabinet{
+    margin-left: 27px;
+}
+/* -- */
+.header-middle{
+    height: 61px;
+    margin-top: 33px;
+}
+
+.search-form {
+    flex-grow: 1; /* Растягиваем форму на всё свободное пространство */
+    /* display: flex; */
+    align-items: center;
+}
+
+/* .search-wrapper {
+    position: relative;
+    width: 100%; 
+} */
+
+.search-input {
+    background-image: url('/static/images/search-icon.svg');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    
+    width: 100%; /* Поле ввода занимает всю ширину обёртки */
+    height: 61px;
+    background-color: #F5F4F2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px 72px; /* Отступы для иконок */
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; /* Padding не увеличивает ширину */
+}
+
+.search-button{
+    margin-left: 20px;
+    background-color: #FED112;
+    min-width: 163px;
+    min-height: 61px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 1;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 21px 20px 19px 25px;
+    position: absolute;
+}
+
+.filter-button:hover {
+    color: #FED112;
+}
+/*html main ----------main html categories */
+
+.all-categories-dish{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    gap: 10px;
+}
+.all-categories-dish div{
+    width: 163px;
+    height: 100px;
+}
+
+.all-categories-dish a{
+    text-decoration: none; /* Убираем подчёркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+.card-categoris{
+    background: radial-gradient(circle at bottom right, #FFC649 0%, #FFF0D1 48%, #FFFFFF 100%);
+}
+.card-categoris-2{ 
+    background: radial-gradient(circle at bottom right,#86C137 0%, #E3FFBC 48%, #FFFFFF 100%)
+}
+.card-categoris-3{ 
+    background: radial-gradient(circle at bottom right,#69689D 0%, #D0D0F5 48%, #FFFFFF 100%)
+}
+.card-categoris-4{ 
+    background: radial-gradient(circle at bottom right,#4DBC90 0%, #B0F0D6 48%, #FFFFFF 100%)
+}
+.card-categoris-5{ 
+    background: radial-gradient(circle at bottom right,#D52E22 0%, #FFA8A8 48%, #FFFFFF 100%)
+}
+.card-categoris-6{ 
+    background: radial-gradient(circle at bottom right,#36BBCA 0%, #C7F9FF 48%, #FFFFFF 100%)
+}
+
+
+.card-categoris{
+    border-radius:10px;
+    position: relative;
+}
+
+.card-categoris img{
+    /* align-items: end; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.card-categoris p{
+    /* text-align: center; */
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+}
+
+.button-switch-all-cats{
+    max-width: 163px;
+    min-height: 100px;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    line-height: 40px;
+    background-color: white;
+    border: 1px solid #242424;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    z-index: 1000;
+}
+.ui-autocomplete li {
+    padding: 5px;
+    cursor: pointer;
+    color: black;  
+    /* font-size: 5px; */
+}
+
+/* style Form registr */
+
+#user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Общие стили для всех полей ввода */
+#user-form input,
+#user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Стили для поля number_phone (дополнительно, если нужно) */
+#id_number_phone {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Стили для ошибок под полем */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Стили для меток (labels), если они есть */
+#user-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Стили для кнопки (если есть submit) */
+#user-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#user-form button:hover {
+    background-color: #45a049;
+}
+
+/* end */
+
+
+@media (max-width: 680px) {
+    .select-city {
+        max-width: 80px;
+        background-position: right 5px center;
+        padding-left: 5px;
+    }
+    .basket{
+        margin-left: 0;
+    }
+    .user_cabinet{
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 620px) {
+    .basket{
+        margin-left: 0;
+    }
+    .user_cabinet{
+        margin-left: 5px;
+    }
+}

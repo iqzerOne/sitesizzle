@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class = 'header'>
+        <div class = 'header_top'>
+            <div class = 'style-left-start'>
+                <div id = 'logo'>
+                    <a href="{% url 'main'%}">
+                        <img src="{% static 'images/logo_sizzle.svg'%}" alt = "Logo" class = "logo">
+                    </a>
+                </div>
+                <div class = 'search_city' >
+                    <form method="POST" >
+                        {% csrf_token %}
+                        <input type="text" 
+                            name="city_name" 
+                            id="city-input" 
+                            class="select-city" 
+                            {% if request.session.city_name %}
+                                value="{{ request.session.city_name }}"
+                                data-selected="true"
+                            {% else %}
+                                placeholder="Выбрать город"
+                                data-selected="false"
+                            {% endif %}>
+                        <input type="hidden" name="city_id" id="city-id">
+                    </form>
+                </div>
+            </div>
+            <div class = 'style-right-end'>
+                <div class = 'register_chef'>
+                    <button class = 'button-register-chef'>
+                        <p>Стать шефом</p>
+                    </button>
+                </div>
+                <div class = 'basket'>
+                    <a href="{% url 'main'%}">
+                        <img src="{% static 'images/basket.svg'%}" alt="" class = 'baket-logo'>
+                    </a>
+                </div>
+                <div class = 'user_cabinet'>
+                    <a href="{% url 'main'%}">
+                        <img src="{% static 'images/mini-profile-foto-default.svg'%}" alt="" class = 'mini-profile-foto'>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class = 'header-middle'>
+            <div class = 'search-header'>
+                <form class="search-form" method="GET">
+                    <div class="search-wrapper">
+                        <button type="button" class="filter-button">
+                            <img src="{% static 'images/icon-sorting.svg'%}" alt="">
+                        </button>
+                        <input type="text" name="query" placeholder="Выбирай домашнюю еду, приготовленную профессионалами" class="search-input">
+                        <button type="submit" class="search-button">
+                            <p>Найти</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Мой сайт</p>
+    </footer>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Результаты поиска{% endblock %}
+
+{% block content %}
+    <h1>Результаты поиска{% if selected_city_id %} в городе {{ cities|lookup:selected_city_id }}{% endif %}</h1>
+    {% if users %}
+        <ul>
+        {% for user in users %}
+            <li>{{ user.username }} ({{ user.profile.city|default:"Город не указан" }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ничего не найдено.</p>
+    {% endif %}
+    <a href="{% url 'main' %}">Вернуться на главную</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Все категории{% endblock %}
+
+{% block content %}
+
+<div class='all-categories-dish'>
+{% for cat in categories %}
+    <div class = 'card-categoris'>
+        <a href="{% url 'category_detail' cat.id %}">
+            <div class = 'card-categoris card-categoris-{{ cat.id }}'>
+                <p>{{ cat.name }}</p>
+                <img src = "{% static cat.image %}" alt="">
+            </div>
+        </a>
+    </div>
+{% endfor %}
+</div>
+<h1>Все-Категории</h1>
+{% endblock %}

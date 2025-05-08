@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}sizzle{% endblock %}
+{% block content %}
+
+<h1>Регистрация</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    {% if form.errors %}
+        <p style="color: red;">Пожалуйста, исправьте ошибки ниже:</p>
+        {{ form.errors }}
+    {% endif %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+{% endblock%}

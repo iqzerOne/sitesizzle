@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Категория - {{object.name}}{% endblock %}
+
+{% block content %}
+
+<h1>{{ category.name }}</h1>
+{% for dish in category.dishes.all %}
+    <p>{{dish.name}}</p>
+    <p>{{dish.price}}</p>
+    <p>{{dish.description}}</p>
+{% endfor %}
+
+{% endblock %}

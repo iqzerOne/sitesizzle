@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}sizzle{% endblock %}
+{% block content %}
+    <div class='all-categories-dish'>
+        {% for cat in categories %}
+        <a href="{% url 'category_detail' cat.id %}">
+            <div class='card-categoris card-categoris-{{ cat.id }}'>
+                <p>{{ cat.name }}</p>
+                <img src="{% static cat.image %}" alt="{{ cat.name }}">
+            </div>
+        </a>
+        {% endfor %}
+        <div class = 'all-categories-button'>
+            <a href="{% url 'category_list' %}">
+            <button class = 'button-switch-all-cats'>
+                <p>Все <img src="{% static 'images/vector-right-all-cats.svg'%}" alt=""> Категории</p>
+            </button>
+            </a>
+        </div>
+    </div>
+
+    <p>Это главная страница.</p>
+{% endblock %}
